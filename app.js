@@ -389,7 +389,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Initialize UI on load
-    updateCartUI();
+    // updateCartUI();
 
     // ==========================================================================
     // SIDEBAR CART DRAWER TRANSITIONS
@@ -519,4 +519,6 @@ Pedido enviado desde la página web. ¡Gracias! 🏍️`;
 
     checkBusinessStatus();
     setInterval(checkBusinessStatus, 30000);
+
+    updateCartUI();
 });
