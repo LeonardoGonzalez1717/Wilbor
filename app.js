@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Catalog Grid and filters
     const menuGrid = document.getElementById('menuGrid');
+    console.log("menuGrid", menuGrid);
     const tabButtons = document.querySelectorAll('.tab-btn');
     function renderCatalog(filter = 'all') {
         console.log("filter", filter);
