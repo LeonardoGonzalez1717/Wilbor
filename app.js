@@ -1,6 +1,8 @@
 // ==========================================================================
 // PRODUCTS DATABASE
 // ==========================================================================
+console.log("22");
+
 const PRODUCTS = [
     {
         id: "burger-triple-bacon",
@@ -75,7 +77,7 @@ let currentQuantity = 1;
 // DOM ELEMENTS REFERENCE
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
-
+    console.log("000");
     // Navbar Elements
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
