@@ -2,7 +2,6 @@
 // PRODUCTS DATABASE
 // ==========================================================================
 alert("¡El archivo JS sí está cargando en Vercel!");
-return;
 
 const PRODUCTS = [
     {
