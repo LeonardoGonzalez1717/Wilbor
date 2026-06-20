@@ -75,12 +75,12 @@ let currentQuantity = 1;
 // DOM ELEMENTS REFERENCE
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // Navbar Elements
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
     const navbar = document.querySelector('.navbar-container');
-    
+
     // Cart drawer elements
     const cartToggleBtn = document.getElementById('cartToggleBtn');
     const cartDrawer = document.getElementById('cartDrawer');
@@ -88,17 +88,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartCloseBtn = document.getElementById('cartCloseBtn');
     const cartItemsList = document.getElementById('cartItemsList');
     const cartCountBadge = document.getElementById('cartCountBadge');
-    
+
     // Pricing sub-elements
     const cartSubtotalAmount = document.getElementById('cartSubtotalAmount');
     const cartTotalAmount = document.getElementById('cartTotalAmount');
     const cartCheckoutFooter = document.getElementById('cartCheckoutFooter');
-    
+
     // Checkout input fields
     const checkoutAddress = document.getElementById('checkoutAddress');
     const checkoutInstructions = document.getElementById('checkoutInstructions');
     const cartCheckoutBtn = document.getElementById('cartCheckoutBtn');
-    
+
     // Modal elements
     const productModal = document.getElementById('productModal');
     const modalCloseBtn = document.getElementById('modalCloseBtn');
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const stepperDecBtn = document.getElementById('stepperDecBtn');
     const stepperIncBtn = document.getElementById('stepperIncBtn');
     const modalAddCartBtn = document.getElementById('modalAddCartBtn');
-    
+
     // Catalog Grid and filters
     const menuGrid = document.getElementById('menuGrid');
     const tabButtons = document.querySelectorAll('.tab-btn');
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 qty: qty
             });
         }
-        
+
         saveCart();
     }
 
@@ -311,7 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Compute total quantity badge
         const totalItemsCount = cart.reduce((sum, item) => sum + item.qty, 0);
         cartCountBadge.textContent = totalItemsCount;
-        
+
         // Handle visual pop pulse animation on badge change
         if (totalItemsCount > 0) {
             cartCountBadge.style.transform = 'scale(1.25)';
@@ -450,7 +450,7 @@ Pedido enviado desde la página web. ¡Gracias! 🏍️`;
 
         // Encode string correctly and redirect
         const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
-        
+
         // Reset cart upon sending
         cart = [];
         saveCart();
@@ -469,17 +469,17 @@ Pedido enviado desde la página web. ¡Gracias! 🏍️`;
     // Open Hours: 12:00 PM (12h) to 11:00 PM (23h)
     const OPEN_HOUR = 12;
     const CLOSE_HOUR = 23;
-
+    renderCatalog('all');
     function checkBusinessStatus() {
         const heroBadge = document.getElementById('heroStatusBadge');
         const infoBadge = document.getElementById('infoStatusBadge');
-        
+
         if (!heroBadge || !infoBadge) return;
 
         const now = new Date();
         const currentHour = now.getHours();
         const currentMinutes = now.getMinutes();
-        
+
         let isOpen = false;
 
         if (currentHour > OPEN_HOUR && currentHour < CLOSE_HOUR) {
@@ -492,12 +492,12 @@ Pedido enviado desde la página web. ¡Gracias! 🏍️`;
 
         const badges = [heroBadge, infoBadge];
         badges.forEach(badge => {
-            badge.className = 'status-badge'; 
+            badge.className = 'status-badge';
             const dot = badge.querySelector('.status-dot') || document.createElement('span');
             dot.className = 'status-dot';
             const text = badge.querySelector('.status-text') || document.createElement('span');
             text.className = 'status-text';
-            
+
             badge.innerHTML = '';
             badge.appendChild(dot);
             badge.appendChild(text);
