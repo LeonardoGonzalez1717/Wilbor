@@ -114,40 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Catalog Grid and filters
     const menuGrid = document.getElementById('menuGrid');
     const tabButtons = document.querySelectorAll('.tab-btn');
-
-    // ==========================================================================
-    // MOBILE NAVBAR CONTROL
-    // ==========================================================================
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
-    }
-
-    // Shrink navbar size on scroll
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.padding = '0.75rem 0';
-            navbar.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.6)';
-            navbar.style.background = 'rgba(4, 4, 5, 0.95)';
-        } else {
-            navbar.style.padding = '0';
-            navbar.style.boxShadow = 'none';
-            navbar.style.background = 'rgba(10, 10, 12, 0.75)';
-        }
-    });
-
-    // ==========================================================================
-    // CATALOG GRID RENDERING & FILTERING
-    // ==========================================================================
     function renderCatalog(filter = 'all') {
         console.log("filter", filter);
         if (!menuGrid) return;
@@ -198,6 +164,41 @@ document.addEventListener('DOMContentLoaded', () => {
             renderCatalog(filterValue);
         });
     });
+
+    // ==========================================================================
+    // MOBILE NAVBAR CONTROL
+    // ==========================================================================
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+
+    // Shrink navbar size on scroll
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.style.padding = '0.75rem 0';
+            navbar.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.6)';
+            navbar.style.background = 'rgba(4, 4, 5, 0.95)';
+        } else {
+            navbar.style.padding = '0';
+            navbar.style.boxShadow = 'none';
+            navbar.style.background = 'rgba(10, 10, 12, 0.75)';
+        }
+    });
+
+    // ==========================================================================
+    // CATALOG GRID RENDERING & FILTERING
+    // ==========================================================================
+
 
     // // Initialize full catalog
     // renderCatalog();
