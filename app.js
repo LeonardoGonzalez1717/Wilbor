@@ -149,6 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // CATALOG GRID RENDERING & FILTERING
     // ==========================================================================
     function renderCatalog(filter = 'all') {
+        console.log("filter", filter);
         if (!menuGrid) return;
         menuGrid.innerHTML = '';
 
@@ -469,7 +470,7 @@ Pedido enviado desde la página web. ¡Gracias! 🏍️`;
     // Open Hours: 12:00 PM (12h) to 11:00 PM (23h)
     const OPEN_HOUR = 12;
     const CLOSE_HOUR = 23;
-    renderCatalog('all');
+
     function checkBusinessStatus() {
         const heroBadge = document.getElementById('heroStatusBadge');
         const infoBadge = document.getElementById('infoStatusBadge');
