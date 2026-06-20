@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
+    renderCatalog()
     // Tabs Event listener
     tabButtons.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -199,8 +199,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Initialize full catalog
-    renderCatalog();
+    // // Initialize full catalog
+    // renderCatalog();
 
     // ==========================================================================
     // PRODUCT DETAILS MODAL LOGIC
