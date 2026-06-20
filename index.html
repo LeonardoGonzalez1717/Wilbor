@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Wilbor Hamburguesas | Los Reyes de la Gastronomía en Turmero. Deliciosas hamburguesas gigantes, perros calientes y raciones premium con delivery en Turmero, Cagua y Maracay.">
+    <title>Wilbor Hamburguesas | Los Reyes De la Gastronomía en Turmero</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation Header -->
+    <header class="navbar-container">
+        <div class="navbar-wrapper">
+            <a href="#" class="logo">
+                <span class="logo-accent">Wilbor</span>
+                <span class="logo-sub">Hamburguesas</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#menu" class="nav-item">Menú</a>
+                <a href="#nosotros" class="nav-item">Nosotros</a>
+                <a href="#info" class="nav-item">Contacto</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Cart Icon Button -->
+                <button class="cart-toggle-btn" id="cartToggleBtn" aria-label="Ver Carrito">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count-badge" id="cartCountBadge">0</span>
+                </button>
+
+                <button class="mobile-menu-toggle" id="menuToggle" aria-label="Abrir Menú">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="hero-section">
+        <div class="hero-bg-gradient"></div>
+        <div class="hero-bg-overlay"></div>
+
+        <div class="hero-content">
+            <div class="status-indicator-wrapper animate-fade-in">
+                <span class="status-badge" id="heroStatusBadge">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Cargando horario...</span>
+                </span>
+            </div>
+
+            <h1 class="hero-title animate-slide-up">
+                Los Reyes De la <br><span class="text-gradient">Gastronomía</span>
+            </h1>
+            <p class="hero-subtitle animate-slide-up-delay">
+                En Turmero, Cagua y Maracay. Sabores brutales, ingredientes seleccionados y las hamburguesas más
+                salvajes de la zona.
+            </p>
+
+            <!-- Instagram Social Stats Badges -->
+            <div class="social-stats-container animate-slide-up-delay-2">
+                <div class="stat-badge">
+                    <span class="stat-val">6.8K</span>
+                    <span class="stat-lbl">Seguidores</span>
+                </div>
+                <div class="stat-badge">
+                    <span class="stat-val">238</span>
+                    <span class="stat-lbl">Publicaciones</span>
+                </div>
+                <div class="stat-badge">
+                    <span class="stat-val">100%</span>
+                    <span class="stat-lbl">Sabor Callejero</span>
+                </div>
+            </div>
+
+            <!-- Service Badges -->
+            <div class="service-badges animate-slide-up-delay-2">
+                <span class="badge-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="1" y="3" width="15" height="13"></rect>
+                        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                        <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                        <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                    </svg>
+                    Delivery Turmero • Cagua • Maracay
+                </span>
+                <span class="badge-item">De Lunes a Lunes: 12:00 PM - 11:00 PM</span>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="hero-actions animate-slide-up-delay-3">
+                <a href="#menu" class="btn-primary btn-lg">
+                    <span>Ordenar en el Menú</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <a href="#info" class="btn-secondary btn-lg">
+                    <span>Nuestra Ubicación</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <a href="#menu" class="scroll-indicator" aria-label="Bajar al menú">
+            <span class="mouse"><span class="wheel"></span></span>
+        </a>
+    </section>
+
+    <!-- Catalog Section with Tabs Filter -->
+    <section id="menu" class="menu-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Pide tu favorito</span>
+                <h2 class="section-title">Nuestra Carta Brutal</h2>
+
+                <!-- Category Selectors -->
+                <div class="menu-tabs">
+                    <button class="tab-btn active" data-tab="all">Todo 🔥</button>
+                    <button class="tab-btn" data-tab="burgers">Hamburguesas 🍔</button>
+                    <button class="tab-btn" data-tab="hotdogs">Perros Calientes 🌭</button>
+                    <button class="tab-btn" data-tab="sides">Raciones 🍟</button>
+                </div>
+            </div>
+
+            <!-- Dynamic Menu Grid -->
+            <div class="menu-grid" id="menuGrid">
+                <!-- Products will be generated dynamically by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Social Proof) -->
+    <section id="nosotros" class="about-section">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-text-card">
+                    <span class="section-subtitle">¿Quiénes Somos?</span>
+                    <h2 class="about-title">Los Reyes de la Gastronomía en Turmero</h2>
+                    <p class="about-desc">
+                        Nacimos para romper las reglas de la comida rápida tradicional. No hacemos hamburguesas
+                        ordinarias; creamos monumentos al sabor con carne premium smash, tocino ahumado ultra crujiente,
+                        salsas de la casa y el pan más suave.
+                    </p>
+                    <p class="about-desc">
+                        Nuestra pasión es llevar el sabor más brutal directo a tu puerta en Turmero, Cagua y Maracay de
+                        Lunes a Lunes. ¡Prepárate para una experiencia gastronómica que no vas a olvidar!
+                    </p>
+                    <div class="about-metrics">
+                        <div class="metric-item">
+                            <span class="metric-num">6.8K+</span>
+                            <span class="metric-lbl">Fans en Instagram</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-num">100%</span>
+                            <span class="metric-lbl">Calidad Premium</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image-card">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80&w=800"
+                        alt="Hamburguesa Gigante Wilbor" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Info Section -->
+    <section id="info" class="info-section">
+        <div class="section-container">
+            <div class="info-grid">
+
+                <!-- Contact info details -->
+                <div class="info-details-card">
+                    <div class="details-header">
+                        <span class="details-subtitle">Contacto & Ubicación</span>
+                        <h2 class="details-title">¿Dónde Comer Wilbor?</h2>
+                    </div>
+
+                    <div class="details-list">
+                        <!-- Dirección -->
+                        <div class="details-item">
+                            <div class="icon-box">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="item-text">
+                                <h3>La Sede Real</h3>
+                                <p>Av. Intercomunal Santiago Mariño, C.C. Intercomunal (cerca de Makro), Local 4,
+                                    Turmero, Edo. Aragua</p>
+                            </div>
+                        </div>
+
+                        <!-- Horarios -->
+                        <div class="details-item">
+                            <div class="icon-box">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="item-text">
+                                <h3>Horario de Atención</h3>
+                                <p>Todos los días (De Lunes a Lunes): 12:00 PM – 11:00 PM</p>
+                                <span class="status-badge" id="infoStatusBadge">
+                                    <span class="status-dot"></span>
+                                    <span class="status-text">Cargando estado...</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Teléfono y WhatsApp -->
+                        <div class="details-item">
+                            <div class="icon-box">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="item-text">
+                                <h3>Pedidos & Soporte</h3>
+                                <a href="https://wa.me/584123474266" target="_blank" class="contact-link">+58 412-3474266
+                                    (WhatsApp)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Frame -->
+                <div class="info-map-card">
+                    <div class="map-iframe-container">
+                        <!-- Turmero Intercomunal representative coordinate mapping -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.32832812239!2d-67.4870529!3d10.2351234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a1387d8383cfb%3A0xe960c6d7d566378e!2sC.C.%20Villas%20del%20Este!5e0!3m2!1ses-419!2sve!4v1718820000000!5m2!1ses-419!2sve"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Mapa de Ubicación de Wilbor Hamburguesas">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-accent">Wilbor</span>
+                    <span class="logo-sub">Hamburguesas</span>
+                </a>
+                <p class="footer-desc">Los verdaderos reyes de la gastronomía urbana en Turmero. Hamburguesas
+                    descomunales elaboradas con pasión de Lunes a Lunes.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <a href="#">Inicio</a>
+                <a href="#menu">Nuestro Menú</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#info">Contacto</a>
+            </div>
+
+            <div class="footer-socials">
+                <h4>Comunidad</h4>
+                <div class="social-icons">
+                    <a href="https://instagram.com/wilborhamburguesas" target="_blank" class="social-icon-link"
+                        aria-label="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        <span>@wilborhamburguesas</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Wilbor Hamburguesas. Todos los derechos reservados. Diseñado para Reyes.</p>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+       PRODUCT DETAILS MODAL
+       ========================================================================== -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="modalCloseBtn" aria-label="Cerrar modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-body">
+                <div class="modal-img-container">
+                    <img id="modalProductImg" src="" alt="Imagen del producto">
+                </div>
+                <div class="modal-info-container">
+                    <h2 class="modal-title" id="modalProductTitle">Nombre del Producto</h2>
+                    <span class="modal-price" id="modalProductPrice">$0.00</span>
+                    <p class="modal-desc" id="modalProductDesc">Descripción detallada del producto.</p>
+
+                    <!-- Stepper Actions and Add Button -->
+                    <div class="modal-actions-wrapper">
+                        <div class="qty-stepper">
+                            <button class="stepper-btn" id="stepperDecBtn" aria-label="Disminuir cantidad">-</button>
+                            <span class="stepper-val" id="stepperQtyVal">1</span>
+                            <button class="stepper-btn" id="stepperIncBtn" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <button class="btn-primary btn-add-cart" id="modalAddCartBtn">
+                            <span>Agregar al Carrito</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       SHOPPING CART DRAWER (SIDEBAR)
+       ========================================================================== */ -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="drawer-header">
+            <h2>Tu Pedido</h2>
+            <button class="drawer-close-btn" id="cartCloseBtn" aria-label="Cerrar Carrito">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Cart Items List Container -->
+        <div class="drawer-content">
+            <div class="cart-items-wrapper" id="cartItemsList">
+                <!-- Dynamically populated by JS -->
+                <div class="cart-empty-message">Tu carrito está vacío. ¡Explora el menú y agrega tu comida favorita! 🍔
+                </div>
+            </div>
+
+            <!-- Checkout Form and Totals -->
+            <div class="cart-checkout-footer" id="cartCheckoutFooter" style="display: none;">
+                <!-- Delivery Info Input -->
+                <div class="checkout-input-group">
+                    <label for="checkoutAddress">Dirección de Entrega / Zona</label>
+                    <input type="text" id="checkoutAddress" placeholder="Ej: Calle 3, Urb. La Julia, Turmero" required>
+                </div>
+
+                <div class="checkout-input-group">
+                    <label for="checkoutInstructions">Instrucciones Especiales / Notas</label>
+                    <input type="text" id="checkoutInstructions" placeholder="Ej: Sin cebolla, refresco de cola, etc.">
+                </div>
+
+                <div class="price-summary-container">
+                    <div class="summary-line">
+                        <span>Subtotal:</span>
+                        <span id="cartSubtotalAmount">$0.00</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Delivery (Estimado):</span>
+                        <span id="cartDeliveryAmount">$2.00</span>
+                    </div>
+                    <div class="summary-line total-line">
+                        <span>Total a Pagar:</span>
+                        <span id="cartTotalAmount">$0.00</span>
+                    </div>
+                </div>
+
+                <button class="btn-primary btn-checkout-wa" id="cartCheckoutBtn">
+                    <span>Enviar Orden por WhatsApp</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/584123474266?text=Hola!%20Quiero%20hacer%20una%20consulta%20sobre%20el%20menú"
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat en WhatsApp">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+            </path>
+        </svg>
+    </a>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+
+</html>
